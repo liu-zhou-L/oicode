@@ -1,6 +1,6 @@
 #include <cstdio>
 
-int n, m, t, k;
+int n, m, t, k, old_r;
 long long a[MAXN];
 
 int main() {
@@ -14,7 +14,8 @@ int main() {
 		left = right = old_r = 1;
 		b[left] = a[left];
 		while (left <= n) {
-			
+			int k = 1;
+			while (k)
 		}
 	}
 	return 0;
