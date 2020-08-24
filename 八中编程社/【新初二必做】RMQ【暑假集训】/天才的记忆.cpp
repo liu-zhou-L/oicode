@@ -3,9 +3,9 @@
 #include <cmath>
 #include <algorithm>
 
-const int MAXN = 1e5 + 5;
+const int MAXN = 2e5 + 5;
 
-int n, m, a[MAXN], f[MAXN][20];/*f[i][j]表示区间[i, i + 2 ^ j - 1]的最大值*/
+int n, m, a[MAXN], f[MAXN][25];/*f[i][j]表示区间[i, i + 2 ^ j - 1]的最大值*/
 
 void ST() {
 	memset(f, 0, sizeof(f));
@@ -25,10 +25,11 @@ int get(int s, int e) {
 }
 
 int main() {
-	scanf("%d%d", &n, &m);
+	scanf("%d", &n);
 	for (int i = 1; i <= n; i++) {
 		scanf("%d", &a[i]);
 	}
+	scanf("%d", &m);
 	ST();
 	for (int i = 1; i <= m; i++) {
 		int tmp, tmp_;
